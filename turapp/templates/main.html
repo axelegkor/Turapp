@@ -10,12 +10,26 @@
     </head>
     
     <body>
-        {% include 'header.html' %}
+        <header>
+            <a href="/">
+                <h1>UT PÅ TUR</h1>
+            </a>
+        </header>
 
-        {% block content %}
+        <div class="main-container">
+            <nav>
+                <p>Navbar</p>
+            </nav>
 
+            <main>
+                {% block content %}
+                    
+                {% endblock %}
+            </main>
+        </div>
 
-        {% endblock %}
-
+        <footer>
+            Footer
+        </footer>
     </body>
 </html>

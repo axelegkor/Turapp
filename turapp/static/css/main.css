@@ -1,3 +1,61 @@
-body {
-    background-color: rgb(234, 252, 210);
+/*
+Main CSS-file for main HTML-template.
+Color palette:
+EBF2FA: lightgrey
+05668D: blue
+427AA1: lighter blue
+679436: green
+A5BE00: army green
+*/
+
+* {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    background-image: linear-gradient(to bottom, #ff9966, #ff5e62);
+    position: sticky;
+    width: 100%;
+    top: 0%;
+    height: 10%;
+    z-index: 1;
+    
+}
+
+nav {
+    background-color: #ff5e62;
+    position: sticky;
+}
+
+main {
+    background-color: #fff;
+    overflow: scroll;
+    padding: 0px;
+    display: flexbox;
+
+}
+
+main p {
+    margin: 0px;
+    padding: 0px;
+    height: 30%;
+    width: 80%;
+    border: solid 1px black;
+
+}
+
+footer {
+    height: 10%;
+    background-image: linear-gradient(to top, #ff9966, #ff5e62);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    height: 80%;
 }
