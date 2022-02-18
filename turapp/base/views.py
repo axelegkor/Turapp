@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
@@ -25,11 +26,26 @@ def loginPage(request):
             messages.error(request, "Brukernavn eller passord eksisterer ikke.")
 
     context={}
-    return render(request, 'HTML TIL LOGIN', context)
+    return render(request, 'base/login.html', context)
 
 def logoutUser(request):
     logout(request)
     return redirect('home')
+
+#log_required
+def enrolled(request):
+    return render(request, 'base/enrolled.html')
+
+#login_required
+def overview(request):
+    return render(request, 'base/overview.html')
+
+#@login_required
+def mypage(request):
+    return render(request, 'base/mypage.html')
+
+def description(request):
+    return render(request, 'base/description.html')
 
 def home(request):
     return render(request, 'base/home.html')

@@ -1,11 +1,5 @@
 /*
 Main CSS-file for main HTML-template.
-Color palette:
-EBF2FA: lightgrey
-05668D: blue
-427AA1: lighter blue
-679436: green
-A5BE00: army green
 */
 
 * {
@@ -16,46 +10,206 @@ A5BE00: army green
     height: 100%;
     width: 100%;
 }
+/*header styling*/
 
 header {
-    background-image: linear-gradient(to bottom, #ff9966, #ff5e62);
-    position: sticky;
+    background-color: #BBBBBB;
     width: 100%;
     top: 0%;
     height: 10%;
     z-index: 1;
+    display: flex;
+}
+
+.headergrid{
+    height: 100%;
+}
+
+.headergrid3 {
+    padding-left: 40%;
+}
+
+
+.headergrid3 p{
+    height: 50%;
+    margin-top: 5px;
+    padding-top: 10px;
+}
+
+.headergrid3 a {
+    margin-right: 10px;
+    padding: 3px 4px 4px 3px;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+}
+
+.headergrid3 a:hover {
+    background-color: blue;
+}
+
+
+#logoimg {
+    object-fit:fill;
+}
+
+
+/*navbar styling*/
+nav {
+    background-color: #333333;
+    height: 5%;
+    position: relative;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2), 0px 7px 7px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+}
+
+/*main content styling*/
+
+main {
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.8267682072829132) 0%, #EEEEEE 100%);
+    padding: 0px;
+    height: 80%;
+    overflow: hidden;
+}
+
+.main-display {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+    overflow-x: auto;
+}
+
+.main-display p {
+    margin: 20px 15px 15px 10px;
+    padding: 40px;
+    height: 50%;
+    width: 80%;
+    border: solid 1px rgb(117, 117, 117);
+    transition: box-shadow 0.4s ease-in-out;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.main-display p:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.2s;
+}
+
+/*mypage styling*/
+
+.mypage{
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+    overflow-x: auto;
+}
+
+.mypage-content{
+    margin: 20px 15px 15px 10px;
+    padding: 40px;
+    height: 50%;
+    width: 80%;
+    border: solid 1px rgb(117, 117, 117);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    background-color: white;
+}
+
+/*description styling*/
+
+.description {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+    overflow-x: auto;
+}
+
+.description-content {
+    margin: 20px 15px 15px 10px;
+    padding: 40px;
+    height: 50%;
+    width: 80%;
+    border: solid 1px rgb(117, 117, 117);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+/*overview styling*/
+
+.overview {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+    overflow-x: auto;
+}
+
+.overview-content {
+    margin: 20px 15px 15px 10px;
+    padding: 40px;
+    height: 50%;
+    width: 80%;
+    border: solid 1px rgb(117, 117, 117);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    background-color: white;
+}
+/*enrolled styling*/
+
+.enrolled {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+    overflow-x: auto;
+}
+
+.enrolled-content {
+    margin: 20px 15px 15px 10px;
+    padding: 40px;
+    height: 50%;
+    width: 80%;
+    border: solid 1px rgb(117, 117, 117);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    background-color: white;
+}
+/*footer styling*/
+
+footer {
+    box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.19);
+    height: 5%;
+    background-color:#BBBBBB;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    overflow: hidden;
+    padding-left: 40%;
+    padding-right: 40%;
     
 }
 
-nav {
-    background-color: #ff5e62;
-    position: sticky;
+.icon {
+    object-fit: contain;
+    margin: 10px;
+    max-height: 60%;
 }
 
-main {
-    background-color: #fff;
-    overflow: scroll;
-    padding: 0px;
-    display: flexbox;
-
-}
-
-main p {
-    margin: 0px;
-    padding: 0px;
-    height: 30%;
-    width: 80%;
-    border: solid 1px black;
-
-}
-
-footer {
-    height: 10%;
-    background-image: linear-gradient(to top, #ff9966, #ff5e62);
-}
-
-.main-container {
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-    height: 80%;
-}
