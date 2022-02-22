@@ -8,10 +8,13 @@ from django.urls import reverse
 
 
 
-class LoginTest(TestCase):
-    client = Client()
+""" class LoginTest(TestCase):
+    def setUp(self):
+        self.client = Client()
+        self.login_url = reverse('login')
+    
 
     def test_user_can_access_page(self):
         response = self.client.get(self.login_url)
         self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'templates/base/login.html')
+        self.assertTemplateUsed(response, 'templates/base/login.html') """
