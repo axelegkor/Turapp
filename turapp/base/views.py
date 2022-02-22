@@ -25,7 +25,7 @@ def loginPage(request):
             messages.error(request, "Brukernavn eller passord eksisterer ikke.")
 
     context={}
-    return render(request, 'HTML TIL LOGIN', context)
+    return render(request, 'base/login.html', context)
 
 def logoutUser(request):
     logout(request)

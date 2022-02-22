@@ -10,7 +10,12 @@
     </head>
     
     <body>
-        <header>
+
+        {% block content %}
+                    
+        {% endblock %}
+        {% include 'navbar.html' %}
+<!--         <header>
             <a href="/">
                 <h1>UT PÅ TUR</h1>
             </a>
@@ -22,14 +27,14 @@
             </nav>
 
             <main>
-                {% block content %}
+                {% block content1 %}
                     
                 {% endblock %}
             </main>
-        </div>
-
+        </div> -->
+<!-- 
         <footer>
             Footer
-        </footer>
+        </footer> -->
     </body>
 </html>

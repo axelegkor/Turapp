@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<!-- <div id="screen">
+    
+</div> -->
+<div id="loginBox">
+    <h1 id="loginH1">Login</h1>
+
+    <div id="formWrapper">
+        <form method="POST" action="" id="loginForm">
+            {% csrf_token %}
+
+            <label></label>
+            <input type="text" name="username" placeholder="Enter Username"/>
+            
+            <label></label>
+            <input type="text" name="password" placeholder="Enter Password"/>
+
+            <input type="submit" value="Login"/>
+
+        </form>
+    </div>
+
+</div>
+
+
+
+{% endblock content %}
