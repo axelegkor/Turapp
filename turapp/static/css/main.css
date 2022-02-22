@@ -291,3 +291,32 @@ footer {
     width: 100%;
 }
 
+.register {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+    overflow-x: auto;
+}
+.register p {
+    margin-top: 40px;
+    height: min-content;
+}
+
+.register p input, .register input{
+    margin-top: 30px;
+    margin: 15px;
+    height: 40px;
+}
+
+.register ul{
+    height: min-content;
+}
+
+.register ul li{
+    margin: 5px;
+    height: 40px;
+}
+
