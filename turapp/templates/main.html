@@ -23,8 +23,9 @@
             </div>
 
             <div class = "headergrid headergrid3">
-                {% if request.user.is_athenticated %}
-                    <p>Hello {{request.user.username}}!<p>
+                {% if user.is_authenticated %}
+                    <p>Hello {{user.username}}!</p>
+                    <a class=" " href="logout/">Log out</a>
                     
                 {% else %}
                     <div class="notloggedin">
@@ -33,7 +34,6 @@
                         <a class=" " href="/">Log in</a>
                         <a class=" " href="/">Sign up</a>
                     </div>
-                    
                 {% endif %}
             </div>
 
