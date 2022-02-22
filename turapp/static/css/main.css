@@ -246,15 +246,9 @@ footer {
     max-height: 60%;
 }
 
-#screen {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: bisque;
-}
 
 #loginBox {
-    position: relative;
+    position: absolute;
     top: 250px;
     left: 50%;
     margin-left: -300px;
@@ -271,21 +265,21 @@ footer {
     position: relative;
     margin: auto;
     text-align: center;
+    height: 100px;
     top: 10%;
     
 }
-/* 
-#formWrapper {
-    position: absolute;
+
+/* #formWrapper {
+    position: relative;
     height: 50px;
     bottom: 25px;
     border: 5px red solid;
 } */
 
 #loginForm {
-    position: absolute;
+    position: relative;
     height: 30px;
-    bottom: 120px;
     width: 400px;
     left: 50%;
     margin-left: -200px;
