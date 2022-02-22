@@ -10,31 +10,55 @@
     </head>
     
     <body>
+        <header>
+            <div class="headergrid headergrid1">
 
-        {% block content %}
+                <a href="/">
+                    <img src="{% static 'img/dummy_logo.png' %}" id="logoimg">
+                </a>
+            </div>
+
+            <div class = "headergrid headergrid2">
+                
+            </div>
+
+            <div class = "headergrid headergrid3">
+                {% if request.user.is_athenticated %}
+                    <p>Hello {{request.user.username}}!<p>
                     
-        {% endblock %}
-        {% include 'navbar.html' %}
-<!--         <header>
-            <a href="/">
-                <h1>UT PÅ TUR</h1>
-            </a>
+                {% else %}
+                    <div class="notloggedin">
+                        <p>You are not logged in!</p>
+                        
+                        <a class=" " href="/">Log in</a>
+                        <a class=" " href="/">Sign up</a>
+                    </div>
+                    
+                {% endif %}
+            </div>
+
         </header>
 
-        <div class="main-container">
-            <nav>
-                <p>Navbar</p>
-            </nav>
+        <nav>
+            <p>Navbar</p>
+        </nav>
 
-            <main>
-                {% block content1 %}
-                    
-                {% endblock %}
-            </main>
-        </div> -->
-<!-- 
+        <main>
+            {% block content %}
+                
+            {% endblock %}
+        </main>
+
         <footer>
-            Footer
-        </footer> -->
+            <a href="/">
+                <img src="{% static 'img/facebook_icon.png' %}" class="icon">
+            </a>
+            <a href="/">
+                <img src="{% static 'img/insta_icon.png' %}" class="icon">
+            </a>
+            <a href="/">
+                <img src="{% static 'img/youtube_icon.png' %}" class="icon">
+            </a>
+        </footer>
     </body>
 </html>
