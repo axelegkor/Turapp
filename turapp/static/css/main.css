@@ -7,10 +7,41 @@ Main CSS-file for main HTML-template.
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    height: 100%;
+
+}
+
+
+body {
+    margin: 0;
+    background-color: #5c6e2d;
+
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #def59f;
+    position: fixed;
+    top: 0;
     width: 100%;
 }
 /*header styling*/
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #333333;
+    text-align: center;
+    padding: 30px 50px;
+    text-decoration: none;
+    font-size: 18px;
+    transition-duration: 0.5s;
+}
+
+.navbar a:hover {
+    background: #f1f1f1;
+    color: black;
+}
+
 
 header {
     background-color: #BBBBBB;
@@ -211,5 +242,56 @@ footer {
     object-fit: contain;
     margin: 10px;
     max-height: 60%;
+}
+
+#screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+}
+
+#loginBox {
+    position: relative;
+    top: 250px;
+    left: 50%;
+    margin-left: -300px;
+    background-color: white;
+    width: 600px;
+    height: 270px;
+    border-radius: 0.7%;
+    box-shadow: 0 3px 7px grey;
+    
+ 
+}
+
+#loginH1 {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    top: 10%;
+    
+}
+/* 
+#formWrapper {
+    position: absolute;
+    height: 50px;
+    bottom: 25px;
+    border: 5px red solid;
+} */
+
+#loginForm {
+    position: absolute;
+    height: 30px;
+    bottom: 120px;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+
+}
+
+#loginForm label, input {
+    height: 100%;
+    width: 100%;
 }
 
