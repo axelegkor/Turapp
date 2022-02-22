@@ -14,7 +14,7 @@
             <div class="headergrid headergrid1">
 
                 <a href="/">
-                    <img src="{% static 'img/dummy_logo.png' %}" id="logoimg">
+                    <img src="{% static 'img/logo1.png' %}" id="logoimg">
                 </a>
             </div>
 
@@ -40,7 +40,7 @@
         </header>
 
         <nav>
-            <p>Navbar</p>
+            {% include "navbar.html" %}
         </nav>
 
         <main>
@@ -49,7 +49,7 @@
             {% endblock %}
         </main>
 
-        <footer>
+        <footer class="footer">
             <a href="/">
                 <img src="{% static 'img/facebook_icon.png' %}" class="icon">
             </a>

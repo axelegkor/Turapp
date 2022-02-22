@@ -6,35 +6,36 @@ Main CSS-file for main HTML-template.
     font-family:Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
+    height: 100%;
+    top: 0;
 
 }
 
 
 body {
     margin: 0;
-    background-color: #5c6e2d;
-
 }
 
 .navbar {
-    overflow: hidden;
-    background-color: #def59f;
-    position: fixed;
+    overflow:hidden;
+    background-color: #BBBBBB;
+    /*position: fixed; */
+    display: flex;
     top: 0;
     width: 100%;
+    height: 100%;
 }
-/*header styling*/
 
 .navbar a {
     float: left;
     display: block;
     color: #333333;
-    text-align: center;
-    padding: 30px 50px;
+    text-align: top center;
+    padding: 10px 20px;
     text-decoration: none;
     font-size: 18px;
     transition-duration: 0.5s;
+    height: 100%;
 }
 
 .navbar a:hover {
@@ -42,9 +43,9 @@ body {
     color: black;
 }
 
-
+/*header styling*/
 header {
-    background-color: #BBBBBB;
+    background-color: white;
     width: 100%;
     top: 0%;
     height: 10%;
@@ -235,6 +236,7 @@ footer {
     overflow: hidden;
     padding-left: 40%;
     padding-right: 40%;
+    
     
 }
 
