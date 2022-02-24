@@ -16,9 +16,13 @@ body {
     margin: 0;
 }
 
+a:visited {
+    color: black;
+}
+
 .navbar {
     overflow:hidden;
-    background-color: #BBBBBB;
+    background-color: #B85042;
     /*position: fixed; */
     display: flex;
     top: 0;
@@ -29,23 +33,22 @@ body {
 .navbar a {
     float: left;
     display: block;
-    color: #333333;
-    text-align: top center;
-    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    padding: 13px 20px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     transition-duration: 0.5s;
     height: 100%;
 }
 
 .navbar a:hover {
-    background: #f1f1f1;
-    color: black;
+    background-color: #e37162;
 }
 
 /*header styling*/
 header {
-    background-color: white;
+    background-color: #E7E8D1;
     width: 100%;
     top: 0%;
     height: 10%;
@@ -79,7 +82,7 @@ header {
 }
 
 .headergrid3 a:hover {
-    background-color: blue;
+    background-color: #B85042;
 }
 
 
@@ -100,8 +103,9 @@ nav {
 /*main content styling*/
 
 main {
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.8267682072829132) 0%, #EEEEEE 100%);
+    /* background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.8267682072829132) 0%, #EEEEEE 100%); */
+    background-color: #A7BEAE;
     padding: 0px;
     height: 80%;
     overflow: hidden;
@@ -125,7 +129,7 @@ main {
     border: solid 1px rgb(117, 117, 117);
     transition: box-shadow 0.4s ease-in-out;
     border-radius: 10px;
-    background-color: white;
+    background-color: #E7E8D1;
 }
 
 .main-display p:hover {
@@ -153,7 +157,7 @@ main {
     border: solid 1px rgb(117, 117, 117);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
-    background-color: white;
+    background-color: #E7E8D1;
 }
 
 /*description styling*/
@@ -176,7 +180,7 @@ main {
     border: solid 1px rgb(117, 117, 117);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
-    background-color: white;
+    background-color: #E7E8D1,;
 }
 
 
@@ -200,7 +204,7 @@ main {
     border: solid 1px rgb(117, 117, 117);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
-    background-color: white;
+    background-color: #E7E8D1;
 }
 /*enrolled styling*/
 
@@ -222,14 +226,14 @@ main {
     border: solid 1px rgb(117, 117, 117);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
-    background-color: white;
+    background-color: #E7E8D1;
 }
 /*footer styling*/
 
 footer {
     box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.19);
     height: 5%;
-    background-color:#BBBBBB;
+    background-color:#E7E8D1;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -252,7 +256,7 @@ footer {
     top: 250px;
     left: 50%;
     margin-left: -300px;
-    background-color: white;
+    background-color: #E7E8D1;
     width: 600px;
     height: 270px;
     border-radius: 0.7%;
@@ -265,7 +269,7 @@ footer {
     position: relative;
     margin: auto;
     text-align: center;
-    height: 100px;
+    height: 90px;
     top: 10%;
     
 }
@@ -287,8 +291,41 @@ footer {
 }
 
 #loginForm label, input {
+    margin-top: 5px;
     height: 100%;
     width: 100%;
+}
+
+.loginButton {
+    background-color: #B85042;
+    color: white;
+    border-radius: 3px;
+    margin-top: 10px;
+    width: 101%;
+    transition-duration: 0.2s;
+}
+
+.loginButton:hover {
+    background-color: #e37162;
+    cursor: pointer;
+}
+
+#signUpLink {
+    position: absolute;
+    text-decoration: none;
+    text-align: center;
+    top: 480px;
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+    font-size: 18px;
+    height: max-content;
+    z-index: 10;
+    transition-duration: 0.2s;
+}
+
+#signUpLink:hover {
+    color: white;
 }
 
 .register {
@@ -301,8 +338,12 @@ footer {
     overflow-x: auto;
 }
 .register p {
-    margin-top: 40px;
+    margin-top: 20px;
     height: min-content;
+}
+
+#regBottomA {
+    margin-top: 14px;
 }
 
 .register p input, .register input{
