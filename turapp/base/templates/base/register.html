@@ -5,10 +5,10 @@
     <form method="POST" action="">
         {% csrf_token %}
         {{form.as_p}}
-        <input type="submit" value="Register" />
+        <input type="submit" value="Register" class="loginButton"/>
 
     </form>
-    <p>Already signed up?</p>
-    <a href="{% url 'login' %}">Log in</a>
+    <p id="regBottomP">Already signed up?</p>
+    <a href="{% url 'login' %}" id="regBottomA">Log in</a>
 </div>
 {% endblock content %}
