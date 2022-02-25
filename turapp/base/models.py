@@ -20,7 +20,7 @@ class Hike(models.Model):
     description = models.TextField(
         default="Arrangøren har ikke lagt ved noen beskrivelse")
     scheduled = models.DateTimeField(default=None, blank=True, null=True)
-    picture = models.ImageField(default=None)
+    #picture = models.ImageField(default=None)
     meetup = models.CharField(
         max_length=50, default="Arrangøren har ikke valgt et oppmøtested")
     participants = models.ManyToManyField(User, related_name="hikes")
