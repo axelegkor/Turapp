@@ -5,8 +5,11 @@
 {% block content %}
     <div class="overview">
         <div class="overview-content">
-            <p>Oversikt over turer bruker arrangerer</p>
-            
+            {% for hike in hikes%}
+
+                {{hike.as_p}}
+
+            {% endfor %}    
         </div>
     </div>
 {% endblock %}

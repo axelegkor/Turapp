@@ -4,10 +4,14 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
+from .models import Hike
 
 
 # Create your views here.
-
+def hike(request, pk):
+    hike = Hike.objects.get(id=pk)
+    context = {'hike': hike}
+    return render(request, 'base/hike.html', context) 
 
 def loginPage(request):
 
@@ -80,7 +84,9 @@ def description(request):
 
 
 def home(request):
-    return render(request, 'base/home.html')
+    hikes = Hike.objects.all()
+    context = {'hikes': hikes}
+    return render(request, 'base/home.html', context)
 
 
 def about(request):

@@ -121,7 +121,7 @@ main {
     overflow-x: auto;
 }
 
-.main-display p {
+.main-display div {
     margin: 20px 15px 15px 10px;
     padding: 40px;
     height: 50%;
@@ -132,9 +132,13 @@ main {
     background-color: #E7E8D1;
 }
 
-.main-display p:hover {
+.main-display div:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition-duration: 0.2s;
+}
+
+.main-display div p {
+    height: 40px;
 }
 
 /*mypage styling*/
