@@ -24,15 +24,15 @@
 
             <div class = "headergrid headergrid3">
                 {% if user.is_authenticated %}
-                    <p>Hello {{user.username}}!</p>
-                    <a class=" " href="{% url 'logout'%}">Log out</a>
+                    <p>Hei {{user.username}}!</p>
+                    <a class=" " href="{% url 'logout'%}">Logg ut</a>
                     
                 {% else %}
                     <div class="notloggedin">
-                        <p>You are not logged in!</p>
+                        <p>Du er ikke innlogget</p>
                         
-                        <a href="{% url 'login'%}">Log in</a>
-                        <a href="{% url 'register'%}">Sign up</a>
+                        <a href="{% url 'login'%}">Logg inn</a>
+                        <a href="{% url 'register'%}">Registrer ny bruker</a>
                     </div>
                 {% endif %}
             </div>

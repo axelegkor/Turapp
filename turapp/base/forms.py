@@ -1,8 +1,8 @@
 from django.forms import ModelForm
-from .models import Room
+from .models import Hike
 
 
 class HikeForm(ModelForm):
     class Meta:
-        model = HikeForm
+        model = Hike
         fields = '__all__'
