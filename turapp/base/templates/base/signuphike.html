@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="signup">
+    <div>
+        <p>@{{user.username}} er nå påmeldt tur <strong>#{{hike.id}} - {{hike.title}}</strong><p>
+        <a href="{% url 'enrolled' %}">Se oversikt over påmeldte turer</a>
+    </div>
+</div>
+{% endblock %}

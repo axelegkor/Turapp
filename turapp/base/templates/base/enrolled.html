@@ -10,6 +10,8 @@
                         <p class="hikeid">#{{hike.id}}</p>
                         <p class="">{{hike.title}}</p>
                         <p>Arrangør: @{{hike.host}}</p>
+                        <a href="{% url 'hike' hike.id%}"><p>Les mer</p></a>
+                        <a href="{% url 'signoffhike' hike.id %}"><p>Meld av</p><a>
                         <p>Antall påmeldte: {{hike.participants.count}}</p>  
                     </div>
                 {% endif %}
