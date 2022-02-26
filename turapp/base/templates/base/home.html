@@ -11,7 +11,11 @@
                     <p>Arrangør: @{{hike.host}}</p>
                     <p>Antall påmeldte: {{hike.participants.count}}</p>
                     <a href="{% url 'hike' hike.id%}"><p>Les mer</p></a>
-                    
+                    {% if user not in hike.participants.all %}
+                        <a href="{% url 'signuphike' hike.id %}"><p>Meld på</p><a>
+                    {% else %}
+                        <p>Du er påmeldt denne turen</p>
+                    {% endif %}
                 </div>
             {% endfor %} 
         </div>

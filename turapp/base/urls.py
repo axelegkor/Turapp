@@ -14,6 +14,8 @@ urlpatterns = [
     path('createhike/', views.createHike, name="createhike"),
     path('updatehike/<str:pk>/', views.updateHike, name="updatehike"),
     path('deletehike/<str:pk>/', views.deleteHike, name="deletehike"),
+    path('signuphike/<str:pk>/', views.signupHike, name="signuphike"),
+    path('signoffhike/<str:pk>/', views.signoffHike, name="signoffhike"),
 
     path('', views.home, name = "home"),
 ]

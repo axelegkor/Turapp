@@ -57,6 +57,19 @@ def deleteHike(request,pk):
     return render(request, 'base/deletehike.html', context)
 
 
+@login_required(login_url='login')
+def signupHike(request, pk):
+    hike = Hike.objects.get(id=pk)
+    hike.joinHike(request.user)
+    context = {'hike': hike}
+    return render(request, 'base/signuphike.html', context)
+
+@login_required(login_url='login')
+def signoffHike(request, pk):
+    hike = Hike.objects.get(id=pk)
+    hike.dropHike(request.user)
+    context = {'hike': hike}
+    return render(request, 'base/signoffhike.html', context)
 
 
 def loginPage(request):
@@ -136,9 +149,10 @@ def description(request):
 
 
 def home(request):
+    user = request.user
     hikes = Hike.objects.all()
     participants = Hike.participants
-    context = {'hikes': hikes, 'participants': participants}
+    context = {'hikes': hikes, 'participants': participants, 'user': user}
     return render(request, 'base/home.html', context,)
 
 
