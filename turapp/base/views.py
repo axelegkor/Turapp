@@ -4,14 +4,60 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from .models import Hike
+from .forms import HikeForm
 
 
 # Create your views here.
 def hike(request, pk):
     hike = Hike.objects.get(id=pk)
-    context = {'hike': hike}
-    return render(request, 'base/hike.html', context) 
+    participants = hike.participants.all()
+    participantcount = hike.participants.all().count()
+    context = {'hike': hike, 'participants': participants, 'participantcount': participantcount}
+    return render(request, 'base/hike.html', context)
+
+@login_required(login_url='login')
+def createHike(request):
+    form = HikeForm()
+
+    if request.method == 'POST':
+        form = HikeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('overview')
+
+    context = {'form': form}
+    return render(request, 'base/createhike.html', context)
+
+def updateHike(request, pk):
+    hike = Hike.objects.get(id=pk)
+    form = HikeForm(instance=hike)
+
+    if request.user != hike.host:
+        return HttpResponse('Du er ikke arrangør på denne turen og kan ikke endre den!')
+
+    if request.method == 'POST':
+        form = HikeForm(request.POST, instance=hike)
+        if form.is_valid():
+            form.save()
+            return redirect('overview')
+
+    context = {'form': form}
+    return render(request, 'base/createhike.html', context)
+
+@login_required(login_url='login')
+def deleteHike(request,pk):
+    hike = Hike.objects.get(id=pk)
+    if request.method == 'POST':
+        hike.delete()
+        return redirect('overview')
+    context = {'hike':hike}
+    return render(request, 'base/deletehike.html', context)
+
+
+
 
 def loginPage(request):
 
@@ -62,19 +108,25 @@ def registerPage(request):
 
 # log_required
 
-
+@login_required(login_url='login')
 def enrolled(request):
-    return render(request, 'base/enrolled.html')
+    hikes = Hike.objects.all()
+    participants = Hike.participants
+    context = {'hikes': hikes, 'participants': participants}
+    return render(request, 'base/enrolled.html', context)
 
 # login_required
 
-
+@login_required(login_url='login')
 def overview(request):
-    return render(request, 'base/overview.html')
+    hikes = Hike.objects.all()
+    participants = Hike.participants
+    context = {'hikes': hikes, 'participants': participants}
+    return render(request, 'base/overview.html', context)
 
 # @login_required
 
-
+@login_required(login_url='login')
 def mypage(request):
     return render(request, 'base/mypage.html')
 
@@ -85,8 +137,9 @@ def description(request):
 
 def home(request):
     hikes = Hike.objects.all()
-    context = {'hikes': hikes}
-    return render(request, 'base/home.html', context)
+    participants = Hike.participants
+    context = {'hikes': hikes, 'participants': participants}
+    return render(request, 'base/home.html', context,)
 
 
 def about(request):

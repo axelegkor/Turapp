@@ -10,7 +10,10 @@ urlpatterns = [
     path('enrolled/', views.enrolled, name="enrolled"),
     path('about/', views.about, name="about"),
     path('register/', views.registerPage, name="register"),
-    path('hike/<str:pk>/', views.hike, name ="room"),
+    path('hike/<str:pk>/', views.hike, name ="hike"),
+    path('createhike/', views.createHike, name="createhike"),
+    path('updatehike/<str:pk>/', views.updateHike, name="updatehike"),
+    path('deletehike/<str:pk>/', views.deleteHike, name="deletehike"),
 
     path('', views.home, name = "home"),
 ]

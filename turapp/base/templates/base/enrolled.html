@@ -3,9 +3,16 @@
 {% extends 'main.html' %}
 
 {% block content %}
-    <div class="enrolled">
         <div class="enrolled-content">
-            <p>Liste med turer som bruker er påmeldt</p>
+            {% for hike in hikes%}
+                {%if request.user in hike.participants.all%}
+                    <div>
+                        <p class="hikeid">#{{hike.id}}</p>
+                        <p class="">{{hike.title}}</p>
+                        <p>Arrangør: @{{hike.host}}</p>
+                        <p>Antall påmeldte: {{hike.participants.count}}</p>  
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
-    </div>
 {% endblock %}

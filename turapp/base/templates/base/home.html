@@ -4,14 +4,15 @@
     
         <div class="main-display">
             {% for hike in hikes%}
-            <div>
+                <div>
                     
                     <p class="hikeid">#{{hike.id}}</p>
                     <p class="">{{hike.title}}</p>
                     <p>Arrangør: @{{hike.host}}</p>
-                    <p></p>
+                    <p>Antall påmeldte: {{hike.participants.count}}</p>
+                    <a href="{% url 'hike' hike.id%}"><p>Les mer</p></a>
                     
-            </div>
+                </div>
             {% endfor %} 
         </div>
     

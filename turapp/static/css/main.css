@@ -111,7 +111,7 @@ main {
     overflow: hidden;
 }
 
-.main-display {
+.main-display, .overview-content, .enrolled-content{
     max-height: 100%;
     display: flex;
     flex-direction: column;
@@ -121,7 +121,7 @@ main {
     overflow-x: auto;
 }
 
-.main-display div {
+.main-display div, .overview-content div, .delete-hike, .enrolled-content div{
     margin: 20px 15px 15px 10px;
     padding: 40px;
     height: 50%;
@@ -132,15 +132,43 @@ main {
     background-color: #E7E8D1;
 }
 
-.main-display div:hover {
+.main-display div:hover, .overview-content div:hover .enrolled-content div:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition-duration: 0.2s;
 }
 
-.main-display div p {
-    height: 40px;
+.main-display div p, .overview-content div p, .enrolled-content div p{
+    height: min-content;
 }
 
+/*hike styling*/
+
+.hike{
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+    overflow-x: auto;
+}
+.hike-display{
+    margin: 20px 15px 15px 10px;
+    padding: 40px;
+    height: 50%;
+    width: 80%;
+    border: solid 1px rgb(117, 117, 117);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    background-color: #E7E8D1;
+}
+.hike-display p {
+    height: min-content;
+}
+
+.hike-display h4{
+    height: min-content;
+}
 /*mypage styling*/
 
 .mypage{
@@ -187,11 +215,11 @@ main {
     background-color: #E7E8D1,;
 }
 
-
-/*overview styling*/
-
-.overview {
+/*GENERAL FORM STYLING*/
+/*createhike styling*/
+.create-hike {
     max-height: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -200,38 +228,12 @@ main {
     overflow-x: auto;
 }
 
-.overview-content {
-    margin: 20px 15px 15px 10px;
-    padding: 40px;
-    height: 50%;
-    width: 80%;
-    border: solid 1px rgb(117, 117, 117);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-    background-color: #E7E8D1;
+.create-hike form {
+    margin-top: 20px;
+    height: min-content;
 }
+
 /*enrolled styling*/
-
-.enrolled {
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: scroll;
-    overflow-x: auto;
-}
-
-.enrolled-content {
-    margin: 20px 15px 15px 10px;
-    padding: 40px;
-    height: 50%;
-    width: 80%;
-    border: solid 1px rgb(117, 117, 117);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-    background-color: #E7E8D1;
-}
 /*footer styling*/
 
 footer {

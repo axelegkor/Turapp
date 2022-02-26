@@ -3,13 +3,19 @@
 {% extends 'main.html' %}
 
 {% block content %}
-    <div class="overview">
         <div class="overview-content">
             {% for hike in hikes%}
-
-                {{hike.as_p}}
-
-            {% endfor %}    
-        </div>
-    </div>
+                {% if request.user == hike.host %}
+                <div>
+                    <p class="hikeid">#{{hike.id}}</p>
+                    <p class="">{{hike.title}}</p>
+                    <p>Arrangør: @{{hike.host}}</p>
+                    <p>Antall påmeldte: {{hike.participants.count}}</p>
+                    <a href="{% url 'hike' hike.id%}"><p>Les mer</p></a>
+                    <a href="{% url 'updatehike' hike.id %}">Rediger</a>
+                    <a href="{% url 'deletehike' hike.id %}">Slett tur</a>
+                </div>
+                {% endif %}     
+            {% endfor %} 
+        </div>   
 {% endblock %}
