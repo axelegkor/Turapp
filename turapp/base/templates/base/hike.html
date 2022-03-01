@@ -1,14 +1,21 @@
-{% extends 'main.html' %}
-
-{% block content %}
+{% extends 'main.html' %} {% block content %}
 <div class="hike">
-<div class="hike-display">  
-    <p>{{hike.title}}</p>
+  <div class="hike-display">
+    <h3>{{hike.title}}</h3>
+
+    <h4>Beskrivelse</h4>
+    <p>{{hike.description}}</p>
+
+    <h4>Oppmøte</h4>
+    <p>{{hike.meetup}}</p>
+
+    <h4>Tid</h4>
+    <p>{{hike.scheduled}}</p>
 
     <h4>Påmeldte deltagere</h4>
     {% for user in participants %}
-        <p>@{{user.username}}</p>
+    <p>@{{user.username}}</p>
     {% endfor %}
-</div>
+  </div>
 </div>
 {% endblock %}
