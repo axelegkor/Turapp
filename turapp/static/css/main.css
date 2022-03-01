@@ -3,281 +3,289 @@ Main CSS-file for main HTML-template.
 */
 
 * {
-    font-family:Arial, Helvetica, sans-serif;
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-    top: 0;
-
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  top: 0;
 }
 
-
 body {
-    margin: 0;
+  margin: 0;
 }
 
 a:visited {
-    color: black;
+  color: black;
 }
 
 .navbar {
-    overflow:hidden;
-    background-color: #B85042;
-    /*position: fixed; */
-    display: flex;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  overflow: hidden;
+  background-color: #b85042;
+  /*position: fixed; */
+  display: flex;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 13px 20px;
-    text-decoration: none;
-    font-size: 15px;
-    transition-duration: 0.5s;
-    height: 100%;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 13px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  transition-duration: 0.5s;
+  height: 100%;
 }
 
 .navbar a:hover {
-    background-color: #e37162;
+  background-color: #e37162;
 }
 
 /*header styling*/
 header {
-    background-color: #E7E8D1;
-    width: 100%;
-    top: 0%;
-    height: 10%;
-    z-index: 1;
-    display: flex;
+  background-color: #e7e8d1;
+  width: 100%;
+  top: 0%;
+  height: 10%;
+  z-index: 1;
+  display: flex;
 }
 
-.headergrid{
-    height: 100%;
+.headergrid {
+  height: 100%;
 }
 
 .headergrid3 {
-    padding-left: 40%;
+  padding-left: 40%;
 }
 
-
-.headergrid3 p{
-    height: 50%;
-    margin-top: 5px;
-    padding-top: 10px;
+.headergrid3 p {
+  height: 50%;
+  margin-top: 5px;
+  padding-top: 10px;
 }
 
 .headergrid3 a {
-    margin-right: 10px;
-    padding: 3px 4px 4px 3px;
-    text-decoration: none;
-    border: 1px solid black;
-    border-radius: 3px;
-    background-color: black;
-    color: white;
+  margin-right: 10px;
+  padding: 3px 4px 4px 3px;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
 }
 
 .headergrid3 a:hover {
-    background-color: #B85042;
+  background-color: #b85042;
 }
-
 
 #logoimg {
-    object-fit:fill;
+  object-fit: fill;
 }
-
 
 /*navbar styling*/
 nav {
-    background-color: #333333;
-    height: 5%;
-    position: relative;
-    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2), 0px 7px 7px 0 rgba(0, 0, 0, 0.19);
-    color: white;
+  background-color: #333333;
+  height: 5%;
+  position: relative;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2),
+    0px 7px 7px 0 rgba(0, 0, 0, 0.19);
+  color: white;
 }
 
 /*main content styling*/
 
 main {
-    /* background: rgb(2,0,36);
+  /* background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.8267682072829132) 0%, #EEEEEE 100%); */
-    background-color: #A7BEAE;
-    padding: 0px;
-    height: 80%;
-    overflow: hidden;
+  background-color: #a7beae;
+  padding: 0px;
+  height: 80%;
+  overflow: hidden;
 }
 
-.main-display, .overview-content, .enrolled-content{
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: scroll;
-    overflow-x: auto;
+.main-display,
+.overview-content,
+.enrolled-content {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: scroll;
+  overflow-x: auto;
 }
 
-.main-display div, .overview-content div, .delete-hike, .enrolled-content div{
-    margin: 20px 15px 15px 10px;
-    padding: 40px;
-    height: 50%;
-    width: 80%;
-    border: solid 1px rgb(117, 117, 117);
-    transition: box-shadow 0.4s ease-in-out;
-    border-radius: 10px;
-    background-color: #E7E8D1;
+.main-display div,
+.overview-content div,
+.delete-hike,
+.enrolled-content div {
+  margin: 20px 15px 15px 10px;
+  padding: 40px;
+  height: 50%;
+  width: 80%;
+  border: solid 1px rgb(117, 117, 117);
+  transition: box-shadow 0.4s ease-in-out;
+  border-radius: 10px;
+  background-color: #e7e8d1;
 }
 
-.main-display div:hover, .overview-content div:hover .enrolled-content div:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition-duration: 0.2s;
+.main-display div:hover,
+.overview-content div:hover .enrolled-content div:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition-duration: 0.2s;
 }
 
-.main-display div p, .overview-content div p, .enrolled-content div p{
-    height: min-content;
+.main-display div p,
+.overview-content div p,
+.enrolled-content div p {
+  height: min-content;
 }
 
 /*hike styling*/
 
-.hike{
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: scroll;
-    overflow-x: auto;
+.hike {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: scroll;
+  overflow-x: auto;
 }
-.hike-display{
-    margin: 20px 15px 15px 10px;
-    padding: 40px;
-    height: 50%;
-    width: 80%;
-    border: solid 1px rgb(117, 117, 117);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-    background-color: #E7E8D1;
+.hike-display {
+  margin: 20px 15px 15px 10px;
+  padding: 40px;
+  height: 50%;
+  width: 80%;
+  border: solid 1px rgb(117, 117, 117);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  background-color: #e7e8d1;
 }
 .hike-display p {
-    height: min-content;
+  height: min-content;
 }
 
-.hike-display h4{
-    height: min-content;
+.hike-display h4 {
+  height: min-content;
+  margin-top: 10px;
+}
+
+.hike-display h3 {
+  height: min-content;
+  margin-bottom: 10px;
 }
 /*mypage styling*/
 
-.mypage, .signoff, .signup {
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: scroll;
-    overflow-x: auto;
+.mypage,
+.signoff,
+.signup {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: scroll;
+  overflow-x: auto;
 }
 
-.mypage-content, .signoff div, .signup div{
-    margin: 20px 15px 15px 10px;
-    padding: 40px;
-    height: 50%;
-    width: 80%;
-    border: solid 1px rgb(117, 117, 117);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-    background-color: #E7E8D1;
+.mypage-content,
+.signoff div,
+.signup div {
+  margin: 20px 15px 15px 10px;
+  padding: 40px;
+  height: 50%;
+  width: 80%;
+  border: solid 1px rgb(117, 117, 117);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  background-color: #e7e8d1;
 }
 
 /*description styling*/
 
 .description {
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: scroll;
-    overflow-x: auto;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: scroll;
+  overflow-x: auto;
 }
 
 .description-content {
-    margin: 20px 15px 15px 10px;
-    padding: 40px;
-    height: 50%;
-    width: 80%;
-    border: solid 1px rgb(117, 117, 117);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-    background-color: #E7E8D1,;
+  margin: 20px 15px 15px 10px;
+  padding: 40px;
+  height: 50%;
+  width: 80%;
+  border: solid 1px rgb(117, 117, 117);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  background-color: #e7e8d1;
 }
 
 /*GENERAL FORM STYLING*/
 /*createhike styling*/
 .create-hike {
-    max-height: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: scroll;
-    overflow-x: auto;
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: scroll;
+  overflow-x: auto;
 }
 
 .create-hike form {
-    margin-top: 20px;
-    height: min-content;
+  margin-top: 20px;
+  height: min-content;
 }
 
 /*enrolled styling*/
 /*footer styling*/
 
 footer {
-    box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.19);
-    height: 5%;
-    background-color:#E7E8D1;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    overflow: hidden;
-    padding-left: 40%;
-    padding-right: 40%;
-    
-    
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.19);
+  height: 5%;
+  background-color: #e7e8d1;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  overflow: hidden;
+  padding-left: 40%;
+  padding-right: 40%;
 }
 
 .icon {
-    object-fit: contain;
-    margin: 10px;
-    max-height: 60%;
+  object-fit: contain;
+  margin: 10px;
+  max-height: 60%;
 }
 
-
 #loginBox {
-    position: absolute;
-    top: 250px;
-    left: 50%;
-    margin-left: -300px;
-    background-color: #E7E8D1;
-    width: 600px;
-    height: 270px;
-    border-radius: 0.7%;
-    box-shadow: 0 3px 7px grey;
-    
- 
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  margin-left: -300px;
+  background-color: #e7e8d1;
+  width: 600px;
+  height: 270px;
+  border-radius: 0.7%;
+  box-shadow: 0 3px 7px grey;
 }
 
 #loginH1 {
-    position: relative;
-    margin: auto;
-    text-align: center;
-    height: 90px;
-    top: 10%;
-    
+  position: relative;
+  margin: auto;
+  text-align: center;
+  height: 90px;
+  top: 10%;
 }
 
 /* #formWrapper {
@@ -288,82 +296,82 @@ footer {
 } */
 
 #loginForm {
-    position: relative;
-    height: 30px;
-    width: 400px;
-    left: 50%;
-    margin-left: -200px;
-
+  position: relative;
+  height: 30px;
+  width: 400px;
+  left: 50%;
+  margin-left: -200px;
 }
 
-#loginForm label, input {
-    margin-top: 5px;
-    height: 100%;
-    width: 100%;
+#loginForm label,
+input {
+  margin-top: 5px;
+  height: 100%;
+  width: 100%;
 }
 
 .loginButton {
-    background-color: #B85042;
-    color: white;
-    border-radius: 3px;
-    margin-top: 10px;
-    width: 101%;
-    transition-duration: 0.2s;
+  background-color: #b85042;
+  color: white;
+  border-radius: 3px;
+  margin-top: 10px;
+  width: 101%;
+  transition-duration: 0.2s;
 }
 
 .loginButton:hover {
-    background-color: #e37162;
-    cursor: pointer;
+  background-color: #e37162;
+  cursor: pointer;
 }
 
 #signUpLink {
-    position: absolute;
-    text-decoration: none;
-    text-align: center;
-    top: 480px;
-    left: 50%;
-    margin-left: -300px;
-    width: 600px;
-    font-size: 18px;
-    height: max-content;
-    z-index: 10;
-    transition-duration: 0.2s;
+  position: absolute;
+  text-decoration: none;
+  text-align: center;
+  top: 480px;
+  left: 50%;
+  margin-left: -300px;
+  width: 600px;
+  font-size: 18px;
+  height: max-content;
+  z-index: 10;
+  transition-duration: 0.2s;
 }
 
 #signUpLink:hover {
-    color: white;
+  color: white;
 }
 
 .register {
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: scroll;
-    overflow-x: auto;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: scroll;
+  overflow-x: auto;
 }
 .register p {
-    margin-top: 20px;
-    height: min-content;
+  margin-top: 20px;
+  height: min-content;
 }
 
 #regBottomA {
-    margin-top: 14px;
+  margin-top: 14px;
 }
 
-.register p input, .register input{
-    margin-top: 30px;
-    margin: 15px;
-    height: 40px;
+.register p input,
+.register input {
+  margin-top: 30px;
+  margin: 15px;
+  height: 40px;
 }
 
-.register ul{
-    height: min-content;
+.register ul {
+  height: min-content;
 }
 
-.register ul li{
-    margin: 5px;
-    height: 40px;
+.register ul li {
+  margin: 5px;
+  height: 40px;
 }
-

@@ -1,9 +1,9 @@
-{% extends 'main.html' %}
-
-{% block content %}
-    <div class="mypage">
-        <div class="mypage-content">
-            <p>Brukers egen side</p>
-        </div>
-    </div>
+{% extends 'main.html' %} {% block content %}
+<div class="mypage">
+  <div class="mypage-content">
+    <p>Brukernavn: @{{user.username}}</p>
+    <a href="{% url 'overview' %}">Egne turer</a>
+    <a href="{% url 'enrolled' %}">Påmeldte turer</a>
+  </div>
+</div>
 {% endblock %}
