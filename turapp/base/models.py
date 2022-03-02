@@ -14,12 +14,13 @@ from django.contrib.auth.models import User
 
 class Hike(models.Model):
     #hikeID = models.AutoField
-    title = models.CharField(max_length=30)
-    host = models.ForeignKey(User, on_delete=models.CASCADE, related_name="hosting")
-    description = models.TextField(default="Arrangøren har ikke lagt ved noen beskrivelse")
+    title = models.CharField(max_length=30, null=False)
+    host = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="hosting")
+    description = models.TextField(null=False)
     scheduled = models.DateTimeField(default=None, blank=True, null=True)
     #picture = models.ImageField(default=None)
-    meetup = models.CharField(max_length=50, default="Arrangøren har ikke valgt et oppmøtested")
+    meetup = models.CharField(max_length=50, null=False)
     participants = models.ManyToManyField(User, related_name="participants")
 
     def joinHike(self, user):
