@@ -2,11 +2,13 @@
 
 {% block content %}
 <div class="delete-hike">
-    <form method="POST" action="">
-        {% csrf_token %}
-        <p>Er du sikker på at du ønsker å slette tur med tittel "{{hike.title}}"?</p>
-        <a href="{{request.META.HTTP_REFERER}}">Nei, ta meg tilbake!</a>
-        <input type="submit" value="Bekreft" />
-    </form>
+    <div class="delete-hike-container">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <p>Er du sikker på at du ønsker å slette tur med tittel "{{hike.title}}"?</p>
+            <a href="{{request.META.HTTP_REFERER}}">Nei, ta meg tilbake!</a>
+            <input type="submit" value="Bekreft" />
+        </form>
+    </div>
 </div>
 {% endblock content %}
