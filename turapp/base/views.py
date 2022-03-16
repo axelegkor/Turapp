@@ -1,13 +1,15 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth import authenticate, login, logout
+from importlib.resources import contents
+from multiprocessing import context
+
 from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.http import HttpResponse
+from django.shortcuts import redirect, render
+
+from .forms import HikeForm, RegisterForm, UserCreationForm
 from .models import Hike
-from .forms import HikeForm
 
 
 # Create your views here.
@@ -104,21 +106,28 @@ def logoutUser(request):
 
 
 def registerPage(request):
-    form = UserCreationForm()
+    if request.user.is_anonymous:
+        if request.method == "POST":
+            form = RegisterForm(request.POST)
+            if form.is_valid():
+                username = form.cleaned_data.get("username")
+                password = form.cleaned_data.get("password1")
+                form.save() 
+                new_user = authenticate(username=username, password=password)
+                if new_user is not None:
+                    login(request, new_user)
+                    return redirect("home")
+    else:
+        return redirect("logoutUser")
+            
+    form = RegisterForm()
+    
+    context ={
+        "form":form
+        }
+    return render(request, 'base/register.html', context)
 
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            user = form.save(commit=False)
-            user.username = user.username.lower()
-            user.save()
-            login(request, user)
-            return redirect('home')
-        else:
-            messages.error(request, 'An error occurred during registration')
-
-    return render(request, 'base/register.html', {'form': form})
-
+    
 # log_required
 
 @login_required(login_url='login')
