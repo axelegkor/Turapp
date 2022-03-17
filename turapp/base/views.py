@@ -7,8 +7,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
+from django.contrib.auth.forms import UserCreationForm
 
-from .forms import HikeForm, RegisterForm, UserCreationForm
+from .forms import HikeForm
 from .models import Hike
 
 
@@ -106,26 +107,20 @@ def logoutUser(request):
 
 
 def registerPage(request):
-    if request.user.is_anonymous:
-        if request.method == "POST":
-            form = RegisterForm(request.POST)
-            if form.is_valid():
-                username = form.cleaned_data.get("username")
-                password = form.cleaned_data.get("password")
-                form.save() 
-                new_user = authenticate(username=username, password=password)
-                if new_user is not None:
-                    login(request, new_user)
-                    return redirect("home")
-    else:
-        return redirect("logoutUser")
-            
-    form = RegisterForm()
-    
-    context ={
-        "form":form
-        }
-    return render(request, 'base/register.html', context)
+    form = UserCreationForm()
+
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.username = user.username.lower()
+            user.save()
+            login(request, user)
+            return redirect('home')
+        else:
+            messages.error(request, 'An error occurred during registration')
+
+    return render(request, 'base/register.html', {'form': form})
 
     
 # log_required

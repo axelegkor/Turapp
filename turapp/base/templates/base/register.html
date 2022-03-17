@@ -4,9 +4,10 @@
 <div class="register">
         <form method="POST" action=".">
             {% csrf_token %}
-            {{form.username}}
-            {{form.password1}}
-            {{form.password2}}
+            <input required name="username" id="username" type="text" class="form-input" placeholder="Username" maxlength="16" minlength="6">
+            <input required name="password1" id="password" type="text" class="form-input" placeholder="Password" maxlength="22" minlength="8"> 
+            <input required name="password2" id="password" type="text" class="form-input" placeholder="Confirm password" maxlength="22" minlength="8">  
+    
             <input type="submit" value="Register" class="loginButton"/>
         </form>
     <p id="regBottomP">Allerede er registerert?</p>
