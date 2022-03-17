@@ -1,13 +1,16 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth import authenticate, login, logout
+from importlib.resources import contents
+from multiprocessing import context
+
 from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.http import HttpResponse
-from .models import Hike
+from django.shortcuts import redirect, render
+from django.contrib.auth.forms import UserCreationForm
+
 from .forms import HikeForm
+from .models import Hike
 
 
 # Create your views here.
@@ -119,6 +122,7 @@ def registerPage(request):
 
     return render(request, 'base/register.html', {'form': form})
 
+    
 # log_required
 
 @login_required(login_url='login')
