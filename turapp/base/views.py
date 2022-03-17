@@ -111,7 +111,7 @@ def registerPage(request):
             form = RegisterForm(request.POST)
             if form.is_valid():
                 username = form.cleaned_data.get("username")
-                password = form.cleaned_data.get("password1")
+                password = form.cleaned_data.get("password")
                 form.save() 
                 new_user = authenticate(username=username, password=password)
                 if new_user is not None:
