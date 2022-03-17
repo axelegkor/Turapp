@@ -34,7 +34,7 @@ class RegisterForm(UserCreationForm):
             'minlength' : '8'
         })
         self.fields["password2"].widget.attrs.update({ 
-            'required': '',
+            'required' : '',
             'name' : 'password2' , 
             'id' : 'password2' , 
             'type' : 'password' ,
@@ -43,8 +43,6 @@ class RegisterForm(UserCreationForm):
             'minlength' : '8'
         })
         
-        
-    
     class Meta: 
         model = User 
-        fields = ('username', 'password1', 'password2') 
+        fields = ('username' , 'password1' , 'password2') 
