@@ -1,3 +1,5 @@
+## This project is part of the NTNU course *TDT4140 - Software Engineering*
+
 # Turapp
 
 ### Running the program locally:
